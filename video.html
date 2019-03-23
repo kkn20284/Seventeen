@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    body{
+        width: 100%;
+        height: auto;
+        background-color: #92A8D1;
+    }
+
+    /* 메뉴입니다. - 공용*/
+    header{
+        width: 100%;
+        height: 80px;
+        background: white;
+    }
+    #main_header{
+        width: 1250px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    #logo{
+        margin: 10px 20px;
+        font-size: 50px;
+        position: relative;
+        display: inline-block;
+        background: linear-gradient(-90deg, #92A8D1 50%, #F7CAC9 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+    }
+    #menu{
+        float: right;
+        margin: 0px 20px;
+    }
+    #menu li{
+        margin: 25px 20px;
+        float: left;
+    }
+    #menu li a{
+        font-size: 25px;
+        color: black;
+    }
+    #menu li a:hover{
+        color: #F7CAC9;
+    }
+
+    /* 메인임. 틀만 고정 */
+    #main{
+        width: 1260px;
+        height: 2800px;
+        margin: 0 auto;
+    }
+    #svt{
+        width: 100%;
+        height: auto;
+        padding: 100px 0;
+    }
+    #svt p{
+        text-align: center;
+    }
+    #first{
+        font-size: 70px;
+        margin-bottom:20px;
+
+        /*
+        position: relative;
+        display: inline-block;
+        background: linear-gradient(-90deg, #92A8D1 50%, #F7CAC9 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+        */
+    }
+    #second{
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+
+    #icon{
+        float: left;
+    }
+    #icon li{
+        float: left;
+        margin: 0 20px;
+    }
+    #icon li a{
+        color: black;
+    }
+
+    /* 내용부분 */
+    #contents{
+        width: 100%;
+        height: 2500px;
+        padding: 40px;
+        background: white;
+    }
+    #video{
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    iframe{
+        margin-bottom: 60px;
+    }
+
+    #mv_intro{
+        margin-bottom: 120px;
+    }
+    #video_date{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #video_name{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    #mv_list li{
+        width: 380px;
+        height: 300px;
+        float: left;
+        margin-bottom: 20px;
+    }
+    #mv_list li:nth-child(3n+2){
+        margin: 0 20px;
+    }
+    #mv_list li span img:hover{
+        transition-duration: 1s;
+        box-shadow: 2px 2px 2px 2px rgb(187, 187, 187);
+    }
+    #mv_list li span img{
+        margin-bottom: 10px;
+    }
+    #mv_list span{
+        text-align: center;
+        color: rgb(146, 146, 146);
+    }
+    .mv_img{
+        width: 380px;
+        height: 220px;
+    }
+    .mv_date{
+        
+    }
+    .mv_name{
+        font-size: 18px;
+        font-weight: 600
+    }
+    
+
+    /* 푸터입니다. */
+    footer{
+        width: 100%;
+        height: 140px;
+        padding: 30px 0;
+        margin-top: 40px;
+        background-color: rgb(54, 54, 54);
+    }
+    footer img{
+        display: block;
+        margin: 0 auto;
+    }
+    footer p{
+        margin-top: 20px;
+        text-align: center;
+        color: rgb(199, 199, 199);
+    }
+</style>
+<script>
+
+</script>
+<body>
+    <header>
+        <div id="main_header">
+            <a href="Seventeen.html"><p id="logo">SEVENTEEN</p></a>
+            <ul id="menu">
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="discography.html">DISCOGRAPHY</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="video.html">VIDEO</a></li>
+                <li><a href="schedule.html">SCHEDULE</a></li>
+                <li><a href="news.html">NEWS</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="main">
+        <div id="svt">
+            <p id="first">SEVENTEEN</p>
+            <p id="second">청량돌, 자체제작 아이돌 등의 수식어와 함께 국내외에서 대세돌로 입지를 굳힌 보이그룹 세븐틴</p>
+            <ul id="icon">
+                <li><a href="http://cafe.daum.net/pledis-17" target="_blank"><i class="fas fa-heart fa-2x"></i> Fan Club</a></li>
+                <li><a href="https://www.facebook.com/seventeennews" target="_blank"><i class="fab fa-facebook-square fa-2x"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/pledis_17" target="_blank"><i class="fab fa-twitter fa-2x"></i> Twitter</a></li>
+                <li><a href="https://www.youtube.com/user/pledis17" target="_blank"><i class="fab fa-youtube fa-2x"></i> Youtube</a></li>
+                <li><a href="https://www.instagram.com/saythename_17/" target="_blank"><i class="fab fa-instagram fa-2x"></i> Instagram</a></li>
+            </ul>
+        </div>
+        <div id="contents">
+            <p id="video">VIDEO</p>
+            <iframe width="1180" height="600" src="https://www.youtube.com/embed/R9VDPMk5ls0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <div id="mv_intro">
+                <p id="video_date">2019.01.21</p>
+                <p id="video_name">SEVENTEEN(세븐틴) - Home</p>
+            </div>
+            <ul id="mv_list">
+                <!-- 셋씩 넣기 -->
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/home.jpg">
+                            <p class="mv_date">2019.01.21</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - Home</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/어쩌나.jpg">
+                            <p class="mv_date">2018.07.16</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 어쩌나</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/거침없이.jpg">
+                            <p class="mv_date">2018.03.21</p>
+                            <p class="mv_name">부석순(SEVENTEEN) - 거침없이</p>
+                        </span>
+                    </a>
+                </li>
+                <!-- 셋씩 넣기 -->
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/고맙다.jpg">
+                            <p class="mv_date">2018.02.05</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 고맙다</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/박수.jpg">
+                            <p class="mv_date">2017.11.06</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 박수</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/울고싶지않아.jpg">
+                            <p class="mv_date">2017.05.22</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 울고싶지않아</p>
+                        </span>
+                    </a>
+                </li>
+                <!-- 셋씩 넣기 -->
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/붐붐.jpg">
+                            <p class="mv_date">2016.12.04</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 붐붐</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/아주나이스.jpg">
+                            <p class="mv_date">2016.07.03</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 아주나이스</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/예쁘다.png">
+                            <p class="mv_date">2016.04.24</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 예쁘다</p>
+                        </span>
+                    </a>
+                </li>
+                <!-- 셋씩 넣기 -->
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/Q&A.jpg">
+                            <p class="mv_date">2015.12.03</p>
+                            <p class="mv_name">SEVENTEEN, Ailee - Q&A</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/만세.jpg">
+                            <p class="mv_date">2015.09.09</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 만세</p>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>
+                            <img class="mv_img" src="images/musicvideo/아낀다.png">
+                            <p class="mv_date">2015.05.29</p>
+                            <p class="mv_name">SEVENTEEN(세븐틴) - 아낀다</p>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_main">
+            <img src="images/logo_pledis.png" alt="플레디스">
+            <p>Copyright(c) 2017 PLEDIS ENTERTAINMENT. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
